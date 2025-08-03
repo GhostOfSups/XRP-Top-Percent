@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XRP Holder Percentile Calculator</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tip-banner {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f8ff;
+            border: 1px solid #4682b4;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            display: none; /* Hide banner by default */
+        }
+        .tip-banner p {
+            margin: 0 0 10px 0;
+        }
+        .xrp-address {
+            font-family: monospace;
+            word-break: break-all;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -16,8 +38,21 @@
             <button type="submit">Calculate</button>
         </form>
         <div id="result" class="result"></div>
+        <div class="tip-banner" id="tipBanner">
+            <p>Enjoying this tool? Tip the Dev!</p>
+            <p>XRP Address: <span class="xrp-address">rQERimqpZebP1Knt3BCMZHDMJWZ7u6ZBuW</span></p>
+        </div>
     </div>
     <script src="data/xrp_distribution.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        // Add event listener to show tip banner on form submission
+        document.getElementById('xrpForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission (if not already handled)
+            // Your existing form processing logic should go here or be handled in script.js
+            // Show the tip banner
+            document.getElementById('tipBanner').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
