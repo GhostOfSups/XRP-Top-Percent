@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XRP Holder Percentile Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>XRP Holder Percentile Calculator</h1>
+        <p>Enter your XRP holdings to see where you rank among other holders.</p>
+        <form id="xrpForm">
+            <label for="xrpAmount">XRP Amount:</label>
+            <input type="number" id="xrpAmount" placeholder="Enter XRP amount" step="any" required>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="data/xrp_distribution.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
